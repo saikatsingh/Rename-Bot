@@ -30,7 +30,7 @@ ADL_BOT_RQ = {}
 START_TEXT = """
 Hello {} , I'am a simple file or media rename bot with permanent thumbnail support.
 
-Made by @FayasNoushad
+Made by @MoviZenX
 """
 HELP_TEXT = """
 <b><u>Rename</u></b>
@@ -46,22 +46,22 @@ HELP_TEXT = """
 <b><u>Show Thumbnail</u></b>
 ➠ Send /showthumb for view current thumbnail.
 
-Made by @FayasNoushad
+Made by @MoViZeNX
 """
 ABOUT_TEXT = """
 - **Bot :** `Rename Bot`
-- **Creator :** [Fayas](https://telegram.me/TheFayas)
-- **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
+- **Creator :** [AnnihilusOP](https://telegram.me/AnnihilusOP)
+- **Channel :** [MoviZenX](https://telegram.me/MoviZenX)
 - **Credits :** `Everyone in this journey`
-- **Source :** [Click here](https://github.com/FayasNoushad/Rename-Bot)
+- **Movie Group :** [Movizenix](https://t.me/MoviZeniX)
 - **Language :** [Python3](https://python.org)
 - **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
+- **Support :** [Heroku](https://t.me/MZX_Support)
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Channel', url='https://telegram.me/FayasNoushad'),
-        InlineKeyboardButton('Feedback', url='https://telegram.me/TheFayas')
+        InlineKeyboardButton('Channel', url='https://telegram.me/MoviZenX'),
+        InlineKeyboardButton('Feedback', url='https://telegram.me/AnnihilusOP')
         ],[
         InlineKeyboardButton('Help', callback_data='help'),
         InlineKeyboardButton('About', callback_data='about'),
@@ -237,8 +237,8 @@ async def filter(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=f"<b>File Name</b> : <code>{filename}</code> \n\nSelect the desired option below 😇",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="📝 RENAME 📝", callback_data="rename")],
-                                                [InlineKeyboardButton(text="✖️ CANCEL ✖️", callback_data="cancel")]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="RENAME Kar", callback_data="rename")],
+                                                [InlineKeyboardButton(text="CANCEL kar", callback_data="cancel")]]),
         parse_mode="html",
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
@@ -319,7 +319,7 @@ async def rename(bot, message):
                     video=new_file_name,
                     thumb=thumb_image_path,
                     caption=description,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/movizenx')]]),
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=("<code>Downloaded Successfully! Now I am Uploading to Telegram...</code>", a, c_time)
@@ -340,7 +340,7 @@ async def rename(bot, message):
                     document=new_file_name,
                     thumb=thumb_image_path,
                     caption=description,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/movizenx')]]),
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=("<code>Downloaded Successfully! Now I am Uploading to Telegram...</code>", a, c_time)
